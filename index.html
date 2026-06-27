@@ -404,6 +404,48 @@
       max-width: 500px;
     }
 
+
+    .why-card {
+      background: #0E2240;
+      padding: 2.25rem;
+      transition: background 0.2s;
+    }
+
+    .why-card:hover { background: #132d52; }
+
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(212,98,42,0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .why-card:hover .why-icon {
+      background: rgba(212,98,42,0.22);
+      transform: scale(1.08);
+    }
+
+    .why-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.01em;
+    }
+
+    .why-card p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.42);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
     /* ── SERVICES ── */
     .services-section { background: var(--white); }
 
@@ -549,7 +591,7 @@
     }
 
     .report {
-      width: 480px;
+      width: 520px;
       max-width: 88vw;
       background: var(--white);
       border-radius: 3px;
@@ -563,7 +605,7 @@
     }
 
     .report-top-bar {
-      background: var(--blue);
+      background: linear-gradient(135deg, #1B3A6B, #16325A);
       padding: 1.1rem 1.75rem;
       display: flex;
       align-items: center;
@@ -635,7 +677,12 @@
       margin: 1.25rem 0;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 0.75rem 0;
+      padding: 0.85rem 0;
+      background: #FAFAF8;
+      margin-left: -1.75rem;
+      margin-right: -1.75rem;
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
     }
 
     .score-row {
@@ -646,17 +693,18 @@
     }
 
     .score-label {
-      font-size: 0.72rem;
-      color: var(--muted);
-      font-weight: 500;
-      width: 130px;
+      font-size: 0.7rem;
+      color: var(--ink);
+      font-weight: 600;
+      width: 120px;
       flex-shrink: 0;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
 
     .score-track {
       flex: 1;
-      height: 5px;
+      height: 7px;
       background: #EEF0F2;
       border-radius: 3px;
       overflow: hidden;
@@ -664,17 +712,17 @@
 
     .score-fill {
       height: 100%;
-      background: var(--orange);
+      background: linear-gradient(90deg, var(--orange), #F59E6A);
       border-radius: 3px;
       transform-origin: left;
       transform: scaleX(0);
     }
 
     .score-pct {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--blue);
-      width: 30px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--orange);
+      width: 34px;
       text-align: right;
       opacity: 0;
     }
@@ -685,7 +733,13 @@
       justify-content: space-between;
       margin-top: 1rem;
       padding-top: 1rem;
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--border);
+      background: linear-gradient(135deg, #F9F9F7, #fff);
+      margin-left: -1.75rem;
+      margin-right: -1.75rem;
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+      padding-bottom: 0.75rem;
     }
 
     .overall-label {
@@ -698,7 +752,7 @@
 
     .overall-score {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--orange);
       opacity: 0;
@@ -1174,6 +1228,10 @@
     .reveal.on { opacity: 1; transform: none; }
 
     @media (max-width: 820px) {
+      #why > div > div[style*="grid-template-columns:repeat(3"] {
+        grid-template-columns: 1fr !important;
+      }
+
       .hero { grid-template-columns: 1fr; }
       .hero-visual { display: none; }
       .services-head { grid-template-columns: 1fr; gap: 2rem; }
@@ -1211,7 +1269,7 @@
       <span>Mystery Shopping & CX Audits — Sri Lanka</span>
     </div>
     <h1>What Your Customers<br>Experience Is <em>Not Always</em><br>What You Think.</h1>
-    <p class="hero-sub">Verify Lanka deploys independent field auditors across Sri Lanka to assess real customer interactions at branch level — unannounced, objective, and fully documented.</p>
+    <p class="hero-sub">Verify Lanka sends independent auditors into your branches as real customers. What they find is what your customers actually experience. No warnings. No staging. Just the truth.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Request an Audit</a>
       <a href="#scene" class="btn-outline">See the Process</a>
@@ -1262,6 +1320,91 @@
   </div>
 </div>
 
+<!-- WHY SECTION -->
+<section id="why" style="background:#0E2240; padding:80px 6%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <span class="eyebrow" style="color:rgba(212,98,42,0.8);">
+      <span style="width:20px;height:1px;background:rgba(212,98,42,0.6);display:inline-block;margin-right:0.6rem;vertical-align:middle;"></span>
+      Why It Matters
+    </span>
+    <h2 class="section-title" style="color:#fff; max-width:600px; margin-top:0.75rem; margin-bottom:3rem;">Your Staff Behave Differently<br>When You Are Not Watching.</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5px; background:rgba(255,255,255,0.06);">
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Hidden Sales Go Unreported</h3>
+        <p>Your cashier closes a sale, pockets the cash, and marks it as a return. With a mystery shopper making real purchases, you get independent transaction records you can cross-reference.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3>Customers Leave and Never Come Back</h3>
+        <p>Most unhappy customers say nothing. They just stop coming. A mystery shopper captures the exact moment service fails, before it costs you repeat business.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3>Your Best Branch Might Be Your Worst</h3>
+        <p>High sales numbers can mask poor service. A branch hitting targets while alienating customers is a future problem. Audits show you what the numbers do not.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <h3>Compliance on Paper Only</h3>
+        <p>Your team confirms the checklist is done. But is it actually done? Mystery visits verify that your brand standards, safety protocols, and service rules are followed in practice.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Train Based on Real Gaps</h3>
+        <p>Instead of generic staff training, audit reports show you exactly which staff, which branch, and which scenario needs attention. Training becomes targeted and measurable.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3>Know Before Your Customers Tell the Internet</h3>
+        <p>A bad Google review reaches hundreds. A mystery shopper report reaches only you. Catching service failures internally is always cheaper than managing public reputation damage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <!-- SERVICES -->
 <section id="services" class="services-section">
   <div class="services-head">
@@ -1269,7 +1412,7 @@
       <span class="eyebrow">What We Do</span>
       <h2 class="section-title reveal">Audit Services Built for Sri Lankan Business</h2>
     </div>
-    <p class="section-body reveal">We assess your customer-facing operations the way your real customers experience them — unannounced, independent, and documented with precision.</p>
+    <p class="section-body reveal">We send real people into your branches as paying customers. They observe, score, and report back. You find out what is actually happening on the ground.</p>
   </div>
   <div class="services-grid">
     <div class="svc reveal">
@@ -1326,8 +1469,11 @@
           <span class="report-date">27 June 2026</span>
         </div>
         <div class="report-body">
-          <div class="report-title">Customer Experience Audit</div>
-          <div class="report-subtitle">Branch Location — Colombo &nbsp;|&nbsp; Unannounced Visit</div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.4rem;">
+            <div class="report-title">Customer Experience Audit</div>
+            <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:rgba(212,98,42,0.1);color:var(--orange);padding:0.25rem 0.6rem;border-radius:2px;border:1px solid rgba(212,98,42,0.2);white-space:nowrap;">Unannounced</span>
+          </div>
+          <div class="report-subtitle">Branch Location — Colombo &nbsp;|&nbsp; Field Auditor #VL-04</div>
 
           <div class="tline w100" id="tl1"></div>
           <div class="tline w80"  id="tl2"></div>
@@ -1335,24 +1481,24 @@
 
           <div class="score-block">
             <div class="score-row">
-              <span class="score-label">Staff Greeting</span>
+              <span class="score-label">Staff Conduct</span>
               <div class="score-track"><div class="score-fill" id="sf1" data-w="0.88"></div></div>
               <span class="score-pct" id="sp1">88%</span>
             </div>
             <div class="score-row">
-              <span class="score-label">Wait Time</span>
+              <span class="score-label">Service Speed</span>
               <div class="score-track"><div class="score-fill" id="sf2" data-w="0.74"></div></div>
               <span class="score-pct" id="sp2">74%</span>
             </div>
             <div class="score-row">
-              <span class="score-label">Product Knowledge</span>
+              <span class="score-label">Compliance</span>
               <div class="score-track"><div class="score-fill" id="sf3" data-w="0.91"></div></div>
               <span class="score-pct" id="sp3">91%</span>
             </div>
             <div class="score-row">
-              <span class="score-label">Cleanliness</span>
-              <div class="score-track"><div class="score-fill" id="sf4" data-w="0.96"></div></div>
-              <span class="score-pct" id="sp4">96%</span>
+              <span class="score-label">Environment</span>
+              <div class="score-track"><div class="score-fill" id="sf4" data-w="0.82"></div></div>
+              <span class="score-pct" id="sp4">82%</span>
             </div>
           </div>
 
@@ -1368,7 +1514,7 @@
             </div>
           </div>
           <div style="margin-top:1rem;padding:0.75rem;background:#F8F9FF;border-radius:2px;border-left:3px solid var(--blue);">
-            <p style="font-size:0.68rem;color:var(--muted);line-height:1.6;font-style:italic;">"Staff were professional and responsive. Wait time exceeded target by 2 minutes. Recommend additional training on product upsell protocols."</p>
+            <p style="font-size:0.68rem;color:var(--muted);line-height:1.6;font-style:italic;">"Staff conduct was satisfactory overall. Service speed at counter needs improvement. Compliance with greeting protocol was inconsistent across two staff members."</p>
           </div>
         </div>
       </div>
@@ -1457,7 +1603,7 @@
       <span class="eyebrow">Coverage</span>
       <h2 class="section-title reveal">Operating Across Sri Lanka</h2>
     </div>
-    <p class="section-body reveal">Ground teams active in Colombo and Kandy. Additional regions available on request.</p>
+    <p class="section-body reveal">Ground teams active in Colombo and Kandy. Other regions covered on request.</p>
   </div>
   <div class="coverage-grid">
     <div class="cov-card reveal">
@@ -1484,7 +1630,7 @@
     <div>
       <span class="eyebrow">Get in Touch</span>
       <h2 class="section-title reveal">Request an Audit</h2>
-      <p class="section-body reveal" style="margin-bottom:2.5rem;">Tell us about your business and what you need audited. We respond within 24 hours.</p>
+      <p class="section-body reveal" style="margin-bottom:2.5rem;">Tell us what you need. We will get back to you within 24 hours.</p>
       <div class="contact-detail">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -1508,6 +1654,7 @@
       <input type="hidden" name="access_key" value="b5a0758b-a79a-4601-912a-c531ae2e26d2" />
       <input type="hidden" name="subject" value="New Audit Request — Verify Lanka" />
       <input type="hidden" name="redirect" value="false" />
+      <input type="hidden" name="from_name" value="Verify Lanka Website" />
       <div class="form-row">
         <div class="form-group">
           <label for="f-name">Full Name</label>
