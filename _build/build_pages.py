@@ -33,19 +33,35 @@ def nav_html():
       <li><a href="/#industries">Industries</a></li>
       <li><a href="/#how">How It Works</a></li>
       <li><a href="/#coverage">Coverage</a></li>
+      <li><a href="/about/">About</a></li>
       <li><a href="/#contact" class="nav-cta">Get a Quote</a></li>
     </ul>
   </nav>"""
 
 
-def footer_html():
+COMPANY = [
+    ("About Verify Lanka", "/about/"),
+    ("Questions and answers", "/faq/"),
+    ("Become a Mystery Shopper", "/become-a-mystery-shopper-sri-lanka/"),
+    ("Contact", "/#contact"),
+]
+
+
+def sitemap_block():
     svc = "".join(f'<li><a href="/{s["slug"]}/">{e(s["name"])}</a></li>' for s in SERVICES)
     ind = "".join(f'<li><a href="/{i["slug"]}/">{e(i["name"])}</a></li>' for i in INDUSTRIES)
-    return f"""  <div class="pg-sitemap">
-    <div><h4>Services</h4><ul>{svc}</ul></div>
-    <div><h4>Industries we audit</h4><ul>{ind}</ul></div>
-  </div>
-  <footer>
+    co = "".join(f'<li><a href="{h}">{e(n)}</a></li>' for n, h in COMPANY)
+    return (
+        '  <div class="pg-sitemap">\n'
+        f'    <div><h4>Services</h4><ul>{svc}</ul></div>\n'
+        f'    <div><h4>Industries we audit</h4><ul>{ind}</ul></div>\n'
+        f'    <div><h4>Company</h4><ul>{co}</ul></div>\n'
+        '  </div>\n'
+    )
+
+
+def footer_html():
+    return f"""{sitemap_block()}  <footer>
     <div class="footer-left">
       <img src="/logo-128.png" alt="Verify Lanka logo" loading="lazy" style="height:32px; mix-blend-mode:screen; filter:brightness(1.5);" />
       <span class="footer-brand-text">
@@ -237,7 +253,7 @@ def write_pages():
 
 
 def write_sitemap():
-    urls = [("/", "1.0")] + [(f"/{s['slug']}/", "0.9") for s in SERVICES] + [(f"/{i['slug']}/", "0.8") for i in INDUSTRIES]
+    urls = [("/", "1.0")] + [(f"/{s['slug']}/", "0.9") for s in SERVICES] + [(f"/{i['slug']}/", "0.8") for i in INDUSTRIES] + [("/about/", "0.7"), ("/faq/", "0.7"), ("/become-a-mystery-shopper-sri-lanka/", "0.6")]
     body = "".join(
         f"  <url>\n    <loc>{SITE}{u}</loc>\n    <lastmod>{TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>{p}</priority>\n  </url>\n"
         for u, p in urls
@@ -266,6 +282,14 @@ def write_llms():
     lines += [f"- [{i['h1']}]({SITE}/{i['slug']}/): {i['desc']}" for i in INDUSTRIES]
     lines += [
         "",
+        "## Company",
+        "",
+        f"- [About Verify Lanka]({SITE}/about/): who we are and how we work.",
+        f"- [Mystery shopping in Sri Lanka: questions and answers]({SITE}/faq/): what mystery shopping is, cost, reports and coverage.",
+        f"- [Become a mystery shopper in Sri Lanka]({SITE}/become-a-mystery-shopper-sri-lanka/): freelance shopper work in every district.",
+    ]
+    lines += [
+        "",
         "## Key facts",
         "",
         "- Independent: auditors have no link to the businesses they audit.",
@@ -282,8 +306,8 @@ def update_home():
     p = os.path.join(ROOT, "index.html")
     s = open(p, encoding="utf-8").read()
     # industries block -> links
-    a = s.index('<div class="industries-wrap reveal">')
-    b = s.index("</div>\n    </div>", s.index('<div class="industries-flex">', a)) + len("</div>")
+    a = s.index('<div class="industries-wrap reveal"')
+    b = s.index("\n    </div>\n  </section>", a)
     links = "\n".join(f'        <a class="itag" href="/{i["slug"]}/">{e(i["name"])}</a>' for i in INDUSTRIES)
     svc_links = "\n".join(f'        <a class="itag" href="/{x["slug"]}/">{e(x["name"])}</a>' for x in SERVICES)
     block = (
@@ -293,16 +317,14 @@ def update_home():
         '      <span class="eyebrow" style="margin-top:2rem;">Our audit services</span>\n'
         '      <div class="industries-flex">\n' + svc_links + "\n      </div>"
     )
-    if 'id="industries"' not in s:
-        old = s[a:b]
-        s = s.replace(old, block)
+    s = s[:a] + block + s[b:]
     # nav entry
     if 'href="#industries"' not in s:
         s = s.replace('<li><a href="#how">How It Works</a></li>', '<li><a href="#industries">Industries</a></li>\n      <li><a href="#how">How It Works</a></li>', 1)
+    if 'href="/about/"' not in s.split("</nav>")[0]:
+        s = s.replace('<li><a href="#coverage">Coverage</a></li>', '<li><a href="#coverage">Coverage</a></li>\n      <li><a href="/about/">About</a></li>', 1)
     # footer sitemap
-    svc = "".join(f'<li><a href="/{x["slug"]}/">{e(x["name"])}</a></li>' for x in SERVICES)
-    ind = "".join(f'<li><a href="/{i["slug"]}/">{e(i["name"])}</a></li>' for i in INDUSTRIES)
-    sm = f'  <div class="pg-sitemap">\n    <div><h4>Services</h4><ul>{svc}</ul></div>\n    <div><h4>Industries we audit</h4><ul>{ind}</ul></div>\n  </div>\n'
+    sm = sitemap_block()
     s = re.sub(r'  <div class="pg-sitemap">.*?</div>\n  </div>\n', "", s, flags=re.S)
     s = s.replace("  <footer>", sm + "  <footer>", 1)
     if 'href="/pages.css"' not in s:
@@ -315,4 +337,6 @@ if __name__ == "__main__":
     write_sitemap()
     write_llms()
     update_home()
+    import extra_pages
+    extra_pages.write_all()
     print("built", len(SERVICES) + len(INDUSTRIES), "pages")

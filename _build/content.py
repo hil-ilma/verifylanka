@@ -117,6 +117,52 @@ SERVICES = [
             ("Can you report to our branch managers directly?", "Yes. We can send each manager their own scorecard as well as the head office report."),
         ],
     },
+    {
+        "slug": "mystery-shopper-programs-sri-lanka",
+        "name": "Mystery Shopper Programs",
+        "title": "Mystery Shopper Programs in Sri Lanka | Verify Lanka",
+        "h1": "Mystery Shopper Programs for Retail, Service and Brand Operations in Sri Lanka",
+        "desc": "Mystery shopper programs for retail chains, service businesses and brand focused operations in Sri Lanka. Mystery shoppers, mystery guests and mystery callers, island wide.",
+        "lead": "A mystery shopper program is a planned series of visits, calls or orders, run to the same checklist across all your outlets. We design the program around your business, whether you run shops, service counters, a franchise or a dealer network.",
+        "checks": [
+            ("Retail mystery shopper programs", "Shop floor service, stock, pricing, promotions and checkout at stores, showrooms and supermarkets."),
+            ("Service mystery shopper programs", "Counter and front office service at banks, finance companies, insurers, telecom outlets, clinics and public offices."),
+            ("Brand standard programs", "Whether franchisees, dealers and distributors present your brand, prices and promotions the way you agreed."),
+            ("Mystery guest programs", "Mystery stays and mystery diners for hotels, resorts, restaurants and cafes."),
+            ("Mystery caller programs", "Calls to hotlines, branches and call centres to test pick up time, accuracy and tone."),
+            ("Online and delivery programs", "Real orders through your website, app or delivery partners, followed from checkout to the door."),
+        ],
+        "why": "One visit tells you about one day. A program tells you about your business. When every outlet is checked the same way, on a schedule, you can compare branches fairly, reward the good ones and fix the weak ones with facts.",
+        "how": "We agree the outlets, the scenarios and how often to visit. Our mystery shoppers follow the same checklist at every location and we send one scored report. Programs can run once, every quarter or every month.",
+        "faqs": [
+            ("What is the difference between a mystery shopper, a secret shopper and a mystery guest?", "They are the same idea with different names. A mystery shopper or secret shopper visits a shop or branch. A mystery guest stays at a hotel or eats at a restaurant. A mystery caller tests a phone line. All of them act as normal customers and report what happened."),
+            ("How many visits does a program need?", "It depends on how many outlets you have and how often you want a result. Many programs start with one visit per outlet, then repeat monthly or quarterly."),
+            ("Can one program cover the whole island?", "Yes. We cover every district of Sri Lanka, so city and rural outlets are measured in the same program."),
+        ],
+    },
+    {
+        "slug": "competitor-benchmarking-sri-lanka",
+        "name": "Competitor Benchmarking",
+        "title": "Competitor Benchmarking and Local Market Intelligence in Sri Lanka | Verify Lanka",
+        "h1": "Competitor Benchmarking and Local Market Intelligence in Sri Lanka",
+        "desc": "See how your service compares with competitors in Sri Lanka. Mystery shoppers run the same scenario at your outlets and theirs, and report the difference.",
+        "lead": "Your customers compare you with the shop or branch down the road. We run the same customer scenario at your outlets and at your competitors, and show you where you are ahead and where you are behind.",
+        "checks": [
+            ("Service comparison", "Greeting, waiting time, staff knowledge and helpfulness, scored on the same sheet for every brand."),
+            ("Prices and promotions", "What a customer is actually quoted and offered at the counter, on the shelf and on the phone."),
+            ("Product range and availability", "Which products, plans or packages are offered and whether they are in stock."),
+            ("Sales approach", "How staff explain, recommend and close, and what they say about other brands."),
+            ("Outlet standards", "Location, appearance, cleanliness, signage and customer facilities."),
+            ("Phone and online channels", "Response time and quality on hotlines, websites, chat and social media."),
+        ],
+        "why": "A score of 80 percent means little on its own. If your nearest competitor scores 90, you have a problem. If they score 60, you have an advantage to protect. Local, on the ground information shows which one it is, town by town.",
+        "how": "You name the competitors and the areas. Our auditors act as ordinary customers, run the same scenario at each brand, and record only what any customer can see and hear. You get a side by side report.",
+        "faqs": [
+            ("Is competitor mystery shopping ethical?", "Yes. Auditors behave as ordinary customers and record only what any member of the public would see and hear. We do not collect confidential information."),
+            ("Will you share our results with other companies?", "No. Your report is yours. We do not share client results with anyone else."),
+            ("Which sectors can you benchmark?", "Any sector with customer facing outlets, including banks, finance companies, telecom, retail, hotels, restaurants and vehicle showrooms."),
+        ],
+    },
 ]
 
 INDUSTRIES = [
