@@ -5,10 +5,10 @@ SERVICES = [
     {
         "slug": "mystery-shopping-sri-lanka",
         "name": "Mystery Shopping",
-        "title": "Mystery Shopping in Sri Lanka | Verify Lanka",
-        "h1": "Mystery Shopping in Sri Lanka",
-        "desc": "Independent mystery shopping across all of Sri Lanka. Trained auditors visit your outlets as real customers and report exactly what happened, within 48 hours.",
-        "lead": "Our auditors walk into your outlets, call your hotline or place an order as ordinary customers. They follow a set scenario, score what they see, and send you a clear report. Nobody on your team knows the visit is happening.",
+        "title": "Mystery Shopping Service in Sri Lanka | Verify Lanka",
+        "h1": "Mystery Shopping Service in Sri Lanka",
+        "desc": "Independent mystery shopping service across all of Sri Lanka. Trained auditors visit your outlets as real customers and report exactly what happened, within 48 hours.",
+        "lead": "Our mystery shopping service sends auditors into your outlets, on your hotline and into your orders as ordinary customers. They follow a set scenario, score what they see, and send you a clear report. Nobody on your team knows the visit is happening.",
         "checks": [
             ("Greeting and first impression", "How fast staff notice the customer, how they greet, and whether they look up from what they are doing."),
             ("Product and service knowledge", "Whether staff answer questions correctly or guess, and whether they send the customer to the right person."),
@@ -122,7 +122,7 @@ SERVICES = [
         "name": "Mystery Shopper Programs",
         "title": "Mystery Shopper Programs in Sri Lanka | Verify Lanka",
         "h1": "Mystery Shopper Programs for Retail, Service and Brand Operations in Sri Lanka",
-        "desc": "Mystery shopper programs for retail chains, service businesses and brand focused operations in Sri Lanka. Mystery shoppers, mystery guests and mystery callers, island wide.",
+        "desc": "Mystery shopping service and mystery shopper programs for retail chains, service businesses and brand focused operations in Sri Lanka. Mystery shoppers, mystery guests and mystery callers, island wide.",
         "lead": "A mystery shopper program is a planned series of visits, calls or orders, run to the same checklist across all your outlets. We design the program around your business, whether you run shops, service counters, a franchise or a dealer network.",
         "checks": [
             ("Retail mystery shopper programs", "Shop floor service, stock, pricing, promotions and checkout at stores, showrooms and supermarkets."),

@@ -117,7 +117,7 @@ def about():
       <div>
         <span class="eyebrow">Who we are</span>
         <h2 class="section-title">A Sri Lankan mystery shopping company</h2>
-        <p class="pg-prose">Verify Lanka is a Sri Lankan mystery shopping and customer experience audit company. We send independent auditors into businesses as ordinary customers, in person, by phone and online, and report exactly what happened.</p>
+        <p class="pg-prose">Verify Lanka is a Sri Lankan mystery shopping service and customer experience audit company. We send independent auditors into businesses as ordinary customers, in person, by phone and online, and report exactly what happened.</p>
         <p class="pg-prose">Our only job is to show you what your customers really experience, so you can fix what is broken and keep what works.</p>
       </div>
       <div>
@@ -155,7 +155,7 @@ def about():
     return shell(
         "about",
         "About Verify Lanka | Mystery Shopping Company in Sri Lanka",
-        "Verify Lanka is an independent Sri Lankan mystery shopping and customer experience audit company covering every district of the island.",
+        "Verify Lanka is an independent mystery shopping service in Sri Lanka, covering every district of the island with customer experience audits.",
         "About",
         "About Verify Lanka",
         "An independent mystery shopping and customer experience audit company, working across all of Sri Lanka.",
@@ -167,6 +167,7 @@ def about():
 # ── FAQ ───────────────────────────────────────────────────────────────
 FAQS = [
     ("What is mystery shopping?", "Mystery shopping is a way to measure customer service. A trained person visits a business as an ordinary customer, follows a planned scenario, and reports what happened against a checklist. Staff do not know the visit is a check."),
+    ("What is a mystery shopping service?", "A mystery shopping service is a company that sends trained people to visit your business as ordinary customers, then reports on the service they received. Verify Lanka is a mystery shopping service that does this for businesses across Sri Lanka, in person, by phone and online."),
     ("What is a mystery shopper?", "A mystery shopper is the person who makes the visit. They are also called secret shoppers, mystery guests when they visit hotels and restaurants, and mystery callers when they test phone lines."),
     ("What is a customer service audit?", "A customer service audit, also called a customer experience or CX audit, compares the service your customers really get with the service your company promises. Mystery shopping is the main method, often with phone, email and chat checks added."),
     ("Which businesses use mystery shopping in Sri Lanka?", "Banks, finance and leasing companies, insurers, telecom providers, supermarkets and retail chains, hotels, restaurants, fuel stations, hospitals, pharmacies, vehicle showrooms, schools, public offices, online stores and call centres."),

@@ -269,7 +269,7 @@ def write_llms():
     lines = [
         "# Verify Lanka",
         "",
-        "> Verify Lanka is a Sri Lankan mystery shopping and customer experience audit company. "
+        "> Verify Lanka is a Sri Lankan mystery shopping service and customer experience audit company. "
         "Independent auditors visit businesses as real customers, in person and by phone, "
         "and deliver scored reports within 48 hours. We cover the whole island, every district, city, town and remote area.",
         "",
