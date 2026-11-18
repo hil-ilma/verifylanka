@@ -71,6 +71,7 @@ def footer_html():
     <p>&copy; 2026 Verify Lanka. All rights reserved.</p>
     <ul class="footer-links">
       <li><a href="https://linkedin.com/company/verifylanka" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://wa.me/94742266513" target="_blank" rel="noopener">WhatsApp +94 74 226 6513</a></li>
       <li><a href="mailto:info@verifylanka.com">info@verifylanka.com</a></li>
     </ul>
   </footer>"""
@@ -173,7 +174,7 @@ def render(page, kind):
       <p class="pg-lead">{e(page["lead"])}</p>
       <div class="pg-actions">
         <a href="/#contact" class="btn-primary">Request an Audit</a>
-        <a href="mailto:info@verifylanka.com" class="btn-outline">info@verifylanka.com</a>
+        <a href="https://wa.me/94742266513" class="btn-outline" target="_blank" rel="noopener">WhatsApp +94 74 226 6513</a>
       </div>
       <ul class="pg-facts">
         <li>All island coverage</li>
