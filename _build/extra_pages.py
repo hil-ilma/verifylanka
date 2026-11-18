@@ -30,10 +30,10 @@ def shell(slug, title, desc, crumb, h1, lead, body, graph, index=True):
   <meta name="description" content="{e(desc)}" />
   <meta name="robots" content="{robots}" />
   <meta name="theme-color" content="#0A1929" />{canonical}
-  <link rel="icon" href="/favicon.ico" sizes="48x48" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" href="/favicon.ico?v=2" sizes="48x48" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Verify Lanka" />
   <meta property="og:title" content="{e(title)}" />
