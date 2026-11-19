@@ -46,6 +46,7 @@ def shell(slug, title, desc, crumb, h1, lead, body, graph, index=True):
   <link href="{bp.FONTS}" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/pages.css" />
+  <script src="/nav.js" defer></script>
 </head>
 
 <body>

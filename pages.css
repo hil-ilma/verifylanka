@@ -129,3 +129,69 @@ a.itag:hover { border-color: var(--orange); color: var(--orange); }
 .pg-qa h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.4rem; color: var(--blue); margin-bottom: 0.6rem; }
 .pg-qa p { color: var(--muted); font-weight: 300; line-height: 1.85; font-size: 0.95rem; }
 .pg-section .pg-actions { margin-bottom: 0; }
+
+/* ---- responsive navigation and hero fixes ---- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  padding: 11px 9px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.nav-toggle.on span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.on span:nth-child(2) { opacity: 0; }
+.nav-toggle.on span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 820px) {
+  .nav-toggle { display: flex; }
+  nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #FAFAF8;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 14px 30px rgba(10, 25, 41, 0.14);
+    padding: 0.25rem 6% 1.25rem;
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+  }
+  nav .nav-links.open { display: flex; }
+  nav .nav-links li { border-bottom: 1px solid var(--border); }
+  nav .nav-links li:last-child { border-bottom: 0; padding-top: 1rem; }
+  nav .nav-links a { display: block; padding: 0.95rem 0; font-size: 0.85rem; }
+  nav .nav-links a.nav-cta { text-align: center; padding: 0.9rem 1rem !important; }
+
+  .hero > * { min-width: 0; }
+  .hero-stats-mob { flex-wrap: wrap; gap: 1rem 1.5rem; padding: 1rem 6%; }
+  .hero-actions-mob { flex-wrap: wrap; gap: 0.75rem; padding: 0.5rem 6% 2.5rem; }
+  .hero-actions-mob .btn-primary,
+  .hero-actions-mob .btn-outline {
+    flex: 1 1 150px;
+    white-space: normal;
+    padding: 0.95rem 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 820px) {
+  .hero-stats-mob { justify-content: flex-start; gap: 1rem 3rem; }
+  .hero-actions-mob { justify-content: flex-start; }
+  .hero-actions-mob .btn-primary,
+  .hero-actions-mob .btn-outline { flex: 0 0 auto; padding: 0.95rem 1.75rem; }
+}

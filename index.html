@@ -82,6 +82,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/pages.css" />
+  <script src="/nav.js" defer></script>
 </head>
 
 <body>
@@ -94,7 +95,8 @@
         alt="Verify Lanka logo" class="nav-icon" />
       <span class="nav-brand"><span class="nav-verify">Verify</span><span class="nav-lanka">lanka</span></span>
     </a>
-    <ul class="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#services">What We Do</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#how">How It Works</a></li>
@@ -109,7 +111,7 @@
     <div class="hero-content">
       <div class="hero-kicker">
         <div class="hero-kicker-line"></div>
-        <span>Mystery Shopping & CX Audits | All Island Sri Lanka</span>
+        <span>Mystery Shopping Service</span>
       </div>
       <h1>What Your Customers<br>Experience Is <em>Not Always</em><br>What You Think.</h1>
       <p class="hero-sub">Verify Lanka is a Sri Lankan mystery shopping service and customer experience audit company. Our independent auditors visit your businesses as real customers. What they find

@@ -28,7 +28,8 @@ def nav_html():
       <img src="/logo-128.png" alt="Verify Lanka logo" class="nav-icon" />
       <span class="nav-brand"><span class="nav-verify">Verify</span><span class="nav-lanka">lanka</span></span>
     </a>
-    <ul class="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="/#services">What We Do</a></li>
       <li><a href="/#industries">Industries</a></li>
       <li><a href="/#how">How It Works</a></li>
@@ -162,6 +163,7 @@ def render(page, kind):
   <link href="{FONTS}" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="/pages.css" />
+  <script src="/nav.js" defer></script>
 </head>
 
 <body>
